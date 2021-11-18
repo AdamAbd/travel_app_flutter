@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'package:travel_app_flutter/constants.dart';
+import 'package:travel_app_flutter/screens/event/event_screen.dart';
 import 'package:travel_app_flutter/size_config.dart';
 
 class CustomNavBar extends StatelessWidget {
@@ -22,7 +23,10 @@ class CustomNavBar extends StatelessWidget {
               NavItem(
                 icon: 'assets/icons/calendar.svg',
                 title: 'Events',
-                press: () {},
+                press: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => EventScreen()));
+                },
               ),
               NavItem(
                 icon: 'assets/icons/chat.svg',
